@@ -34,7 +34,7 @@ export const SearchButton = styled.button`
   width: 48px;
   height: 48px;
   border: 0;
-  background-color: aquamarine;
+
   background-image: url('./search-magnifier.svg');
   background-size: 40%;
   background-repeat: no-repeat;
