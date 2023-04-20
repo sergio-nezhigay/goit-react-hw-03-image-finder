@@ -1,12 +1,18 @@
 import React from 'react';
+import {
+  SearchbarWrapper,
+  SearchbarForm,
+  SearchButton,
+  SearchButtonLabel,
+} from './SearchBar.styled';
 
 export default function SearchBar() {
   return (
-    <header class="searchbar">
-      <form class="form">
-        <button type="submit" class="button">
-          <span class="button-label">Search</span>
-        </button>
+    <SearchbarWrapper>
+      <SearchbarForm>
+        <SearchButton type="submit" class="button">
+          <SearchButtonLabel>Search</SearchButtonLabel>
+        </SearchButton>
 
         <input
           class="input"
@@ -15,7 +21,7 @@ export default function SearchBar() {
           autofocus
           placeholder="Search images and photos"
         />
-      </form>
-    </header>
+      </SearchbarForm>
+    </SearchbarWrapper>
   );
 }
