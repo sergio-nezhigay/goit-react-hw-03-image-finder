@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-import { Container, Section } from 'components';
+import { Container } from 'components';
+import SearchBar from 'components/SearchBar/SearchBar';
 
 export class App extends Component {
   render() {
     return (
       <Container>
-        <Section title="Phonebook">
-          <h1>Test!!!!!!!!!!</h1>
-        </Section>
+        <SearchBar />
       </Container>
     );
   }
