@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import { Form, Field } from 'formik';
+
+import searchImage from '../../images/search-magnifier-outline.svg';
 
 export const SearchbarWrapper = styled.div`
   top: 0;
@@ -19,7 +22,7 @@ export const SearchbarWrapper = styled.div`
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 
-export const SearchbarForm = styled.form`
+export const SearchbarForm = styled(Form)`
   display: flex;
   align-items: center;
   width: 100%;
@@ -35,7 +38,7 @@ export const SearchButton = styled.button`
   height: 48px;
   border: 0;
 
-  background-image: url('./search-magnifier.svg');
+  background-image: url(${searchImage});
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -58,4 +61,19 @@ export const SearchButtonLabel = styled.span`
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
+`;
+
+export const Input = styled(Field)`
+  display: inline-block;
+  width: 100%;
+  font: inherit;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  ::placeholder {
+    font: inherit;
+    font-size: 18px;
+  }
 `;
