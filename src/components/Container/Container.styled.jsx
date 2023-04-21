@@ -5,4 +5,7 @@ export const Container = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 16px;
   padding-bottom: 24px;
+  &.blur {
+    filter: blur(5px);
+  }
 `;

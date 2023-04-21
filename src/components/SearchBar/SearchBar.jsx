@@ -1,5 +1,6 @@
 import React from 'react';
-import { Formik, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
+import PropTypes from 'prop-types';
 
 import { object, string } from 'yup';
 
@@ -12,14 +13,14 @@ import {
 } from './SearchBar.styled';
 
 let schema = object({
-  search: string().required(),
+  searchText: string().required(),
 });
 
-export default function SearchBar({ onSubmit }) {
+export function SearchBar({ onSubmit }) {
   return (
     <SearchbarWrapper>
       <Formik
-        initialValues={{ search: '' }}
+        initialValues={{ searchText: '' }}
         validationSchema={schema}
         onSubmit={onSubmit}
       >
@@ -40,3 +41,7 @@ export default function SearchBar({ onSubmit }) {
     </SearchbarWrapper>
   );
 }
+
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
